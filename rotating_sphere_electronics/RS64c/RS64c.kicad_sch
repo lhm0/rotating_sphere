@@ -1,0 +1,209 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "f80c1822-db32-4cb0-a7ce-3b6816566ddf")
+	(paper "A4")
+	(title_block
+		(title "RS64c")
+		(date "2025-01-12")
+		(rev "Rev 1")
+		(company "Ludwin Monz")
+		(comment 1 "you may not use the material for commercial purposes.")
+		(comment 2 "you may use non-commercially, adapt, share alike ")
+		(comment 3 "https://creativecommons.org/licenses/by-nc-sa/4.0/")
+		(comment 4 "License: Creative Commons Attribution-Non-Commercial (CC BY-NC-SA)")
+	)
+	(lib_symbols)
+	(text "Rotating Sphere"
+		(exclude_from_sim no)
+		(at 24.13 77.47 0)
+		(effects
+			(font
+				(size 5 5)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "0db0b716-fc86-4361-8210-24d9984c5ab8")
+	)
+	(text "RP2040 microcontroller"
+		(exclude_from_sim no)
+		(at 203.2 60.96 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.8)
+				(bold yes)
+			)
+			(justify right bottom)
+		)
+		(uuid "2b9358ef-66fa-40e2-897a-29f72a8d8dd3")
+	)
+	(text "RS64c"
+		(exclude_from_sim no)
+		(at 24.13 90.17 0)
+		(effects
+			(font
+				(size 5 5)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd09edbb-119a-45d3-8756-ef26cbfc67bb")
+	)
+	(text "LED electronics 1/2"
+		(exclude_from_sim no)
+		(at 153.67 80.01 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.8)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "ca02489d-d058-40c3-aa1d-538dfd145613")
+	)
+	(text "LED electronics 2/2\n"
+		(exclude_from_sim no)
+		(at 153.67 99.06 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.8)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d22aef1f-19c9-4834-b353-4af203eb5921")
+	)
+	(sheet
+		(at 129.54 91.44)
+		(size 96.52 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "17ff4d09-ce0d-4377-8642-864f00716734")
+		(property "Sheetname" "LED_electronics1"
+			(at 129.54 90.7284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LED_electronics1.kicad_sch"
+			(at 129.54 103.4546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "RS64c"
+				(path "/f80c1822-db32-4cb0-a7ce-3b6816566ddf"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 129.54 72.39)
+		(size 96.52 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "99607da6-50be-4295-8e4b-f0efebb06faf")
+		(property "Sheetname" "LED_electronics"
+			(at 129.54 71.6784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "LED_electronics.kicad_sch"
+			(at 129.54 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "RS64c"
+				(path "/f80c1822-db32-4cb0-a7ce-3b6816566ddf"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 129.54 53.34)
+		(size 96.52 11.43)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "de1eca94-b0eb-49ba-ab4d-889b8e3226f1")
+		(property "Sheetname" "RP2040"
+			(at 129.54 52.6284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "RP2040.kicad_sch"
+			(at 129.54 65.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(property "Feld2" ""
+			(at 129.54 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "RS64c"
+				(path "/f80c1822-db32-4cb0-a7ce-3b6816566ddf"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

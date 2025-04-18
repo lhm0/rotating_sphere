@@ -1,0 +1,22 @@
+<!DOCTYPE HTML> 
+<html> 
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>ESP01-s Web Server</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>Rotating LED Sphere</h1>
+        <h2>brightness: </h2> <p class="text1" id="brightnessValue">55 %</p>
+        <input type="range" id="brightnessSlider" min="10" max="100" value="0" step="5" class="slider"></input>
+        <h3>SD card files:</h3>
+        <div class="file-list-container">
+            <ul class="file-list" id="fileList"></ul>
+        </div>              
+ 		<button class="button-1" id="reset-wifi">config wifi</button>
+        <button class="button-2" id="time-zone">time zone</button>
+		<button class="button-3" id="playlist">playlist</button>
+        <script src="index.js"></script>
+    </body>
+</html>

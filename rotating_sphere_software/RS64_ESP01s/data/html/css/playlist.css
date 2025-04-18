@@ -1,0 +1,233 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-family: Arial;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline;
+  text-align: center;
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 18px;
+  font-family: Arial;
+  font-weight: bold;
+  position: absolute;
+  top: 70px;
+  left: calc(50% - 70px);
+}
+
+h3 {
+  font-size: 18px;
+  font-family: Arial;
+  font-weight: bold;
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 70px);
+}
+
+h4 {
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: bold;
+  position: absolute;
+  top: 450px;
+  left: calc(50% - 100px);
+}
+
+.text1 {
+  font-size: 18px;
+  font-family: Arial;
+  font-weight: bold;
+  position: absolute;
+  top: 67px;
+  left: calc(50% + 35px);
+}
+
+.file-list-container {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  max-height: 180px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border: 2px solid #2196F3;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.file-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-list li {
+  padding: 4px 8px;
+  font-family: Arial;
+  font-size: 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.file-list li:hover {
+  background-color: #e0e0e0;
+}
+
+.file-list li.selected {
+  background-color: #2196F3;
+  color: white;
+  font-weight: bold;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 12px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+button {
+  font-size:17px;
+  font-family:Arial;
+  width:175px;
+  height:36px;
+  border-width:0px;
+  margin: 5px;
+  color:rgba(33, 150, 243, 1);
+  border-color:rgba(33, 150, 243, 1);
+  font-weight:bold;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  background:rgba(211, 211, 211, 1);
+}
+
+button:hover {
+  background: rgba(155, 155, 155, 1)
+}
+
+button:active {
+  background: rgba(155, 155, 155, 1)
+}        
+
+button:focus {
+  background: rgba(211, 211, 211, 1);
+}
+
+.button-1 {
+  position: absolute;
+  top: 345px;
+  left: calc(50% - 185px);
+}
+
+.button-2 {
+  position: absolute;
+  top: 345px;
+  left: calc(50% + 5px);
+}
+
+.button-3 {
+  position: absolute;
+  top: 395px;
+  left: calc(50% - 90px);
+}
+
+.button-4 {
+  position: absolute;
+  top: 720px;
+  left: calc(50% - 185px);
+}
+
+.button-5 {
+  position: absolute;
+  top: 720px;
+  left: calc(50% + 5px);
+}
+
+.button-6 {
+  position: absolute;
+  top: 770px;
+  left: calc(50% - 185px);
+}
+
+.button-7 {
+  position: absolute;
+  top: 770px;
+  left: calc(50% + 5px);
+}
+
+.button-8 {
+  position: absolute;
+  top: 830px;
+  left: calc(50% - 90px);
+}
+
+.playlist-display-box {
+  top: 500px;
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #aaa;
+  padding: 10px;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.playlist-row {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 0;
+  align-items: center;
+}
+
+.playlist-row.selected {
+  background-color: #d0e7ff;
+}
+
+.playlist-col {
+  flex: 1;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.playlist-col.name {
+  width: 250px; 
+  flex: 0 0 auto;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.playlist-col input[type="number"] {
+  width: 60px;
+}
+
+.playlist-col input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+

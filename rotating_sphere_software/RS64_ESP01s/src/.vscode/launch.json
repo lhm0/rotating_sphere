@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/ludwin/Elektronik/rotating_sphere/rotating_sphere_software/ESP01s/src",
+      "program": "/Users/ludwin/Elektronik/rotating_sphere/rotating_sphere_software/ESP01s/src/build/Debug/outDebug"
+    }
+  ]
+}

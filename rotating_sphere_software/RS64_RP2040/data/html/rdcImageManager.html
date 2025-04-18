@@ -1,0 +1,75 @@
+<html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+    <title>RDC Image Generator</title>
+    <link rel="stylesheet" type="text/css" href="rdcImageManager.css" media="all">
+
+</head>
+	<body>
+ 	    <h1>RDC Image Manager</h1>
+  	  	<div class="file-list" id="file-list"></div>
+		<h2>RDC image generation</h2>
+		<button class="button-1" id="load-img">load image</button>
+      
+        <h5>x:</h5>      
+        <input type="text" id="xdim" class="input1">
+        <h6>y:</h6>
+        <input type="text" id="ydim" class="input2">
+      
+        <form class="form-container">
+            <label class="radioButton">all
+                <input type="radio" id="option1" name="radioGroup" value="option1">
+                <span class="checkmark1"></span>
+            </label>
+            <label class="radioButton">1/2
+                <input type="radio" id="option2" name="radioGroup" value="option2">
+                <span class="checkmark1"></span>
+            </label>
+            <label class="radioButton">1/3
+                <input type="radio" id="option3" name="radioGroup" value="option3">
+                <span class="checkmark1"></span>
+            </label>       </form>
+      
+        <label class="container">
+            <input type="checkbox" id="scale">
+            <span class="checkmark"></span>
+            scale vs. crop
+        </label>
+      
+        <h4>file selection</h4>
+        <button class="button-3" id="save-rdc">save .rdc</button>
+		<img id="image-preview" src="" alt="Selected Image">
+    	<p class="text3" id="fileSize"></p>
+		<p class="text6" id="diskSpace">diskspace</p>
+		<textarea class="text4" id="text-box"></textarea>
+		<textarea class="text5" id="text-selected-file"></textarea>
+    	<p class="text1" id="selected-clock-face"></p>
+    	<p class="text2" id="selected-logo"></p>
+		<img id="image-rdc" src="">
+		<p class="text7" id="rdc-filename">rdc filename</p>
+        <p class="text11" id="num-frames">number of frames</p>
+      
+		<h3>RDC image selection</h3>
+        <button class="button-4" id="select-clock-face">select clock face</button>
+		<button class="button-8" id="clr-clock-face">clear clock face</button>
+      	<button class="button-5" id="select-logo">select logo</button>
+      	<button class="button-7" id="select-image">select image</button>
+		<p class="text8" id="rdc-clock-face">clockFaceFilename.rdc</p>
+		<p class="text9" id="rdc-logo">logoFilename.rdc</p>
+		<p class="text10" id="rdc-image">imageFilename.rdc</p>
+        <button class="button-6" id="fm-done">done</button>
+        <div id="border1"></div>
+        <div id="border2"></div>
+        <div id="border3"></div>
+        <div id="border4"></div>
+        <div id="border5"></div>
+
+    	<script type="module" src="rdcImageManager.js"></script>
+		<script type="text/javascript" src="./omggif.js"></script>
+
+	</body>
+</html>
+

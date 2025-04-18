@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/ludwin/Elektronik/RD128/RD128_electronics/RD128_display/helper",
+      "program": "/Users/ludwin/Elektronik/RD128/RD128_electronics/RD128_display/helper/build/Debug/outDebug"
+    }
+  ]
+}

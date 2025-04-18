@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Playlist</title>
+    <link rel="stylesheet" href="playlist.css" />
+  </head>
+  <body>
+    <h1>Playlist Manager</h1>
+
+    <h3>SD card files:</h3>
+    <div class="file-list-container">
+      <ul class="file-list" id="playlistFileList"></ul>
+    </div>
+
+    <button class="button-1" id="select-playlist">open playlist</button>
+    <button class="button-2" id="new-playlist">new playlist</button>
+    <button class="button-3" id="save-playlist">save playlist</button>
+
+    <h4 id="currentPlaylistName" class="playlist-name-display"></h4>
+
+    <div class="file-list-container playlist-display-box">
+      <div id="playlistContent"></div>
+    </div>
+
+    <div class="playlist-controls">
+      <button class="button-4" id="move-up">move up</button>
+      <button class="button-5" id="move-down">move down</button>
+      <button class="button-6" id="add-track">add track</button>
+      <button class="button-7" id="delete-track">delete track</button>
+      <button class="button-8" id="done">done</button>
+    </div>    
+
+    <script src="playlist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+;
+; Rotating Sphere
+; LED multiplexing
+;
+; Ludwin Monz, 2025
+
+; RS128 uses a LED matrix with 16 rows and 8 columns. Only one row can be selected at a time. 
+; The data for the 8 LEDs of the row is set by the 8 columns. The columns are controlled by a 
+; STP24DP05 LED controller
+;
+; sm0 receives control data consisting of brightness and row number. 
+; sm0 sets the row number, and waits until LED data has been sent to STP24DP05 by sm1. Then, it updates LED data 
+;     with LE, turns on the LEDs and executes a delay (in which the LEDs are on).
+; sm1 receives the LED data.
+; sm1 sends the LED data to STP24DP05 and signals execution to sm0.    
+;
+; serial data for STP24DP05: GPIO 0
+; clock: GPIO 1
+; LE (latch enable): GPIO 2
+; OE (output enable): GPIO 3 
+; row selection: GPIO 4, 5, 6, 7. Set binary number 0, 1, ..., 15
+; 
+; The two FIFOs are cascaded as OUTPUT FIFOs, which gives us 2 x 4 x 32 bits = 8 LED sets.
+; Once the FIFO is empty, a IRQ is generated, which needs to re-fill the FIFO with the next set of LED data.
+; 
+;
+;
+
+.program LED_multiplexer_sm0
+.wrap_target
+    pull block              ; read 32 bits from FIFO to OSR. Wait, if no data is available
+                            ; as FIFO fill status is synchronous with FIFO of sm1, 
+                            ; there is no need to request new data, if empty (will be managed by sm1)
+
+                            ; this is the control data, consisting of brightness (uint16_t) and row number (4 bits)
+
+    out pins, 4             ; output row number
+    out x, 16 [31]          ; copy brightess to x, delay 1
+
+    wait 1 irq 6            ; wait for "data transfer complete", indicated by irq6. Subsequentially, clear irq6.
+
+    set pins, 0b11          ; bit1 = OE = LEDs off; bit0 = LE = HIGH;  => update LED data
+    set pins, 0b00          ; bit1 = OE = LEDs on; bit0 = LE = LOW => LEDs on
+
+    irq set 7              ; send "request next data transfer" (indicated by irq7)
+
+delay2:
+    jmp x--, delay2         ; count down delay2 (in which the LEDs are on)
+
+    set pins, 0b10          ; bit 1 = OE = LEDs off, bit 0 = LE = LOW => LEDs off
+
+.wrap
+
+.program LED_multiplexer_sm1
+.wrap_target
+    pull block              ; read 32 bits from FIFO to OSR. Wait, if no data is available
+                            ; this is the LED data
+    mov x, status           ; status to be defined with sm_config_set_mov_status (&c, STATUS_TX_LESSTHAN , 1 )
+    jmp !x start            ; When fifo is NOT empty skip IRQ request
+    irq 0                   ; when fifo is empty, fire an interrupt
+start:
+
+    set x, 23             ; load bit counter to x. the loop will be executed 24 times
+loop:
+    set pins, 0             ; set clock to 0
+    out pins, 1             ; set SID (data line) to next bit 
+    nop                     ; extend loop to 5 clock cycles, as 130 MHz / 5 = 26 MHz 
+    set pins, 1             ; set clock to HIGH
+    jmp x--, loop           ; loop
+
+    set pins, 0             ; clean out clock line
+
+    irq set 6              ; signal "data transfer complete" (indicated by irq6)
+    wait 1 irq 7            ; wait for "next data transfer requested" (indicated by irq7) and clear irq7 afterwards
+
+.wrap

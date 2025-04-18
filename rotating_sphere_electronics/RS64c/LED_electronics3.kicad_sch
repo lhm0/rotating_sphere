@@ -1,0 +1,18 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "96c6670e-01e2-4536-beff-8030403726c6")
+	(paper "A4")
+	(title_block
+		(title "RD56_color")
+		(date "2023-08-20")
+		(rev "Rev 2")
+		(company "Ludwin Monz")
+		(comment 1 "you may not use the material for commercial purposes.")
+		(comment 2 "you may use non-commercially, adapt, share alike ")
+		(comment 3 "https://creativecommons.org/licenses/by-nc-sa/4.0/")
+		(comment 4 "License: Creative Commons Attribution-Non-Commercial (CC BY-NC-SA)")
+	)
+	(lib_symbols)
+)

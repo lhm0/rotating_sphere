@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/ludwin/Elektronik/Matrix_test/software/src",
+      "program": "/Users/ludwin/Elektronik/Matrix_test/software/src/build/Debug/outDebug"
+    }
+  ]
+}
