@@ -5,9 +5,11 @@
 
 1. these three resistors set the forward peak current of the LEDs. 1k corresponds to 20 mA, 270 Ohms corresponds to 75 mA. 
 2. I had copied this part of the schematic from an earlier project, changed the value but missed to change the component in the production data. As a result, I worked with 20mA, although I thought it was 75.
-3. I have changed the resistors in my unit from 1k to 270 Ohm in the meantime (what a pain: these are 0402 resistors!). Yes, it is brighter. But it comes with a complication: if you set the brightness in the user interface too high, the processor crashes. I am not sure yet, why that happens. My guess is that the voltage breaks down, as the power conspumtion goes up with higher brightness, obviously. I will further look into this, but it needs some time.
-4. Here is my recommendation: use 270 Ohm resistors. Even if you reduce the brightness setting, so that the device works flawlessly, it is brighter than before (with 1k). It should not be a big deal to limit the brightness in the software.
-5. I have updated the schematic and the production file in the meantime.
+3. I have changed the resistors in my unit from 1k to 270 Ohm in the meantime (what a pain: these are 0402 resistors!). Yes, it is significantly brighter. For some reason, colors look even more saturated, now. The color animation, which can be seen in the video, looks stunning.
+4. However, higher brightness means higher power consumption. If you supply the device with a 12 V power plug (12V, 2A), you can not run it at 100% brightness. I found that the processor crashes, when you go too high. This is obviously a voltage breakdown.
+5. Fortunately, I designed the power supply such that it can be operated with up to 24V. When you run the sphere with 17V or above, you can go up to 100% brightness.
+6. Here is my recommendation: use 270 Ohm resistors. If you run the device at 12V, you need to reduce the brightness setting, so that the device works flawlessly. If you want more, you need a power supply with more than 17V, 2 or better 3 A (consumption depends on motor speed).
+7. I have updated the schematic and the production file in the meantime.
 
 ![Rotating LED Sphere](images/Title_page.jpg)
 
