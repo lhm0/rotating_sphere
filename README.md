@@ -1,5 +1,14 @@
 # Rotating LED Sphere – RP2040 POV Display
 
+**UPDATE April 30th, 2025**
+@randybeever5206 made me aware (**thank you!**), that the value of R403, R404, and R405 on the main display board should be 270 Ohm according to the schematic, but the properties field and the corresponding line in the production file refers to a 1k resistor instead. Let me explain:
+
+1. these three resistors set the forward peak current of the LEDs. 1k corresponds to 20 mA, 270 Ohms corresponds to 75 mA. 
+2. I had copied this part of the schematic from an earlier project, changed the value but missed to change the component in the production data. As a result, I worked with 20mA, although I thought it was 75.
+3. I have changed the resistors in my unit from 1k to 270 Ohm in the meantime (what a pain: these are 0402 resistors!). Yes, it is brighter. But it comes with a complication: if you set the brightness in the user interface too high, the processor crashes. I am not sure yet, why that happens. My guess is that the voltage breaks down, as the power conspumtion goes up with higher brightness, obviously. I will further look into this, but it needs some time.
+4. Here is my recommendation: use 270 Ohm resistors. Even if you reduce the brightness setting, so that the device works flawlessly, it is brighter than before (with 1k). It should not be a big deal to limit the brightness in the software.
+5. I have updated the schematic and the production file in the meantime.
+
 ![Rotating LED Sphere](images/Title_page.jpg)
 
 ## 📌 Project Overview
@@ -16,7 +25,7 @@ All hardware, software, PCB layouts and 3D printable parts are **open source** a
 ## ✨ Features
 
 - 🟡 64 RGB LEDs arranged to form a 170 mm spherical POV display  
-- 📊 Display resolution: **128 × 256 pixels** (via interlacing)  
+- 📊 Display resolution: **64 × 256 pixels** **(corrected: it is NOT 128 x 256)**  
 - 🎞️ Supports **.rs64** video/image format (GIFs, animations, stills)  
 - 💾 Real-time video streaming from **SD card via SDIO (4-bit)**  
 - ⚙️ Driven by an **RP2040** using fast **PIO-based multiplexing**  
