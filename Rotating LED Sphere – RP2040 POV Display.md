@@ -1,6 +1,6 @@
 # Rotating LED Sphere – RP2040 POV Display
 **UPDATE May 10th, 2025**
-I am currently working on an update of the power supply. The idea is to replace the 12V power plug with an USB-C PD (power delivery) power supply. I am interested in the CH224K, which manages the voltage negotiation with the USB PD. This would allow us to use a standard USB-C charger (probably about 25 - 35 W) for supplying the device. USB power delivery can provide 5, 9, 12, 15, or 20V. This is exactly the range needed for the rotating sphere. At the same time I will replace the motor power regulator with a stronger one. Currently, the motor current cannot go above 2A, which is just barely sufficient.
+I am currently working on an update of the power supply. The idea is to replace the 12V power plug with an USB-C PD (power delivery) power supply. I am interested in the CH224K, which manages the voltage negotiation with the USB PD. This would allow us to use a standard USB-C charger (probably about 25 - 35 W) for supplying the device. USB power delivery can provide 5, 9, 12, 15, or 20V. This is exactly the range needed for the rotating sphere and would resolve the power supply issue described below. At the same time I will replace the motor power regulator with a stronger one. Currently, the motor current cannot go above 2A, which is just barely sufficient.
 
 If you are interested, stay tuned. However, it will definitely take 4 weeks, probably more, to get it done.
 
