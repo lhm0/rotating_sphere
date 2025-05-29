@@ -1,4 +1,18 @@
 # Rotating LED Sphere – RP2040 POV Display
+**UPDATE May 29th, 2025**
+
+In the meantime I had the new power supply board built and could test it the last couple of days. **It works fine as expected.** 
+
+Power is now supplied from a **standard USB-C power supply** with power delivery ("PD") function via an off-the-shelf USB-C cable. I am using the Apple power supply of my MacBook. The CH224k for controlling the voltage setting works extremely well. The voltage can be set with a 3 bit dip switch, easily. When set to 15 V, the transmitted energy to the LED board is sufficient even for the highest brightness setting. Of course, the losses of the wireless power transmission show up as heat, but the temperature looks reasonable to me.
+
+The motor power supply has a **stronger step-down converter chip** now (TPS54302 instead of TPS54202 in the old design). The circuit allows for up to 3A of motor current. Furthermore, I introduced a button control logic for setting the motor speed in 5 steps. There are two buttons: increase speed, and OFF. This eliminates the potentiometer and the on/off switch in the old design.
+
+Finally, I **increased the diameter of the circular hole in the middle of the pcb**, which allows for a significantly larger and stronger motor to LED-board connection. The tray disk has a larger diameter now. The 4 holes in the secondary coil pcb are now being used for securing the LED assembly to the motor.
+
+![USB-C power supply for the rotating sphere](images/RS64c_PS.jpg)
+
+In order to fit the new pcb, I had to modify the housing. Please find the related files in this repository.
+
 **UPDATE May 10th, 2025**
 I am currently working on an update of the power supply. The idea is to replace the 12V power plug with an USB-C PD (power delivery) power supply. I am interested in the CH224K, which manages the voltage negotiation with the USB PD. This would allow us to use a standard USB-C charger (probably about 25 - 35 W) for supplying the device. USB power delivery can provide 5, 9, 12, 15, or 20V. This is exactly the range needed for the rotating sphere. At the same time I will replace the motor power regulator with a stronger one. Currently, the motor current cannot go above 2A, which is just barely sufficient.
 
