@@ -1,4 +1,12 @@
 # Rotating LED Sphere – RP2040 POV Display
+**UPDATE August 29th, 2025**
+There are two push switches on the power supply pcb, that control the speed of the motor. The "speed" button is used to increase the motor speed step by step. Once the maximum speed is reached, it jumps back to zero. The "off" button turns the motor off.
+
+However, The buttons were previously positioned at the same height as the power supply circuit board, very close to the rotating sphere assembly. To reduce the risk of injury, I have moved the buttons to the center of the power supply housing in the latest version of the housing. The movement of the two buttons is transferred to the switches on the circuit board purely mechanically, so that no modification of the circuit board is necessary.
+
+![The two buttons are in the center of the base, now.](images/center_buttons.jpg)
+![Two levers link the buttons with the switches.](images/button_levers.jpg)
+
 **UPDATE May 29th, 2025**
 
 In the meantime I had the new power supply board built and could test it the last couple of days. **It works fine as expected.** 
