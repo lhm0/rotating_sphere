@@ -1,4 +1,13 @@
 # Rotating LED Sphere – RP2040 POV Display
+**UPDATE December 24th, 2025**
+I have made a change to the header of the motor in order to make the connection to the sphere stronger and long term stable.
+
+![New header without alignment screws](images/new_header.jpeg)
+
+However, alignment of the rotor now is done by placing washers between header and pcb, if necessary.
+
+Furthermore, I have added a file "print_instructions.pdf" in the /mechanics subfolder, with slicer images of the parts that need nut inlays.
+
 **UPDATE August 29th, 2025**
 There are two push switches on the power supply pcb, that control the speed of the motor. The "speed" button is used to increase the motor speed step by step. Once the maximum speed is reached, it jumps back to zero. The "off" button turns the motor off.
 
